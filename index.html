@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Vpay API Reference</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -313,6 +313,14 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                  </li>
+                  <li>
+                    <a href="#test-cards" class="toc-h2 toc-link" data-title="Test Cards">Test Cards</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
@@ -321,7 +329,7 @@
             <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get-all-kittens-2" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
                   </li>
                   <li>
                     <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
@@ -344,11 +352,77 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Vpay offers a range of services that make it possible for you to send and receive money across the world in minutes. On this page, we&#39;ll go over some of the payment services we offer to give you a quick overview of what is obtainable with Vpay.</p>
+
+<p>Payment collection
+If you&#39;re a business owner, here are a few ways we make it possible for you to collect payments from customers all over the world:</p>
+
+<p>Card Payments - Customers can supply their card details and complete payment in a few minutes</p>
+
+<p>Direct bank account payments (Nigeria) - Customers can pay you directly from their bank accounts.</p>
+
+<p>Bank account payments (UK) - Your customers in the UK can pay directly into your Vpay account</p>
+
+<p>Here&#39;s a list of countries where Vpay supports mobile money wallet collections
+Ghana</p>
+
+<p>Uganda</p>
+
+<p>Zambia</p>
+
+<p>Rwanda</p>
+
+<p>Mpesa</p>
+
+<p>You can also take a look at our Payment Methods for a closer look at all the possible channels through which you can receive payments from your customers using Vpay.</p>
+
+<p>Tokenised Payments
+This is a feature that allows you to save a customer object on your platform so your users don&#39;t have to enter their card information repeatedly.</p>
+
+<p>Charge with token
+Pre-authorisation
+Preauthorizing a card or an account allows you to place a hold on the amount you would like to charge a customer. For instance, you can preauthorize a card for 7days before taking the money from the customer. Merchants in the Hotel, Shared economy (Uber), and flight booking industry use this to put a customer&#39;s payment on hold while they confirm value has been given.</p>
+
+<p>Preauthorise a card
+Transfers
+With Vpay, you can make transfers to over 6+ African countries. This is a growing list that currently includes the US and Europe. We offer this feature via the dashboard and also via API for financial service providers, merchants, marketplaces, and IMTOs, etc.</p>
+
+<p>How Transfers work
+Bill payments
+With Vpay, you can aggregate bill services such as airtime purchases and DSTV subscriptions. You get a commission for each sale and you can view your reports on a dashboard.</p>
+
+<p>Bill payments
+Manage Subscriptions
+You can make use of our APIs to manage your customer&#39;s subscriptions for recurring payments.
+Subscriptions allow you to subscribe your customers to a payment plan that will ensure recurring payments happen on their accounts following your predefined specifications.</p>
+
+<p>Payment plans
+Collect payments using subaccounts
+You can use our APIs to manage marketplace accounts or collect payments on behalf of merchants you create on our platform. This will allow you to perform functions like edit their details, delete them and get a list of the merchants and their IDs.</p>
+
+<p>Subaccounts
+Other Features
+You can find comprehensive documentation of all the amazing features we offer in our Vpay features section where we discuss every feature in detail.</p>
 
 <p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<h2 id='get-all-kittens'>Get All Kittens</h2>
+<p>VPAY authenticates your API requests using your account’s API keys. If you do not include your key when making an API request or use one that is incorrect or outdated, VPAY returns an error.</p>
+<h2 id='test-cards'>Test Cards</h2>
+<p>When building with VPAY, we understand you need to test your implementations in a test environment before going live. That is why we&#39;ve provided you with a list of test cards to use for test purposes. The cards cover a variety of use cases and simulations for failed and successful transactions with specific messages.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>Test MasterCard PIN authentication
+Card number: 5531 8866 5214 2950
+cvv: 564
+Expiry: 09/32
+Pin: 3310
+OTP: 12345</p>
+
+<p>Test Visa Card 3D-Secure authentication (VBVSECURECODE)
+Card number: 4187 4274 1556 4246
+cvv: 828
+Expiry: 09/32
+Pin: 3310
+OTP: 12345</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -379,7 +453,7 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens-2'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
